@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary-darkest: #170F2E;
+    --primary-darker: #312163;
+    --primary-dark: #5531A7;
+    --primary-default: #9251F7;
+    --primary-light: #C696FC;
+    --primary-lighter: #EFE2F9;
+    --primary-lightest: #F8F2FC;
+    --second-darker: #1F2347;
+    --second-dark: #2A337E;
+    --second-default: #516CF7;
+    --second-light: #95AAFB;
+    --second-lighter: #E1E7FE;
+    --second-lightest: #F5F7FF;
+    --gray-darkest: #232339;
+    --gray-darker: #2E2E48;
+    --gray-dark: #47516B;
+    --gray-default: #79819A;
+    --gray-light: #ACB1C3;
+    --gray-lighter: #D9DFE8;
+    --gray-lightest: #E2E6EE;
+    --gray-lightest: #F7F9FC;
+    --status-info: #22C3F1;
+    --status-success-light: #E7FAE5;
+    --status-success: #4AC06F;
+    --status-success-dark: #1F5C43;
+    --status-warning-light: #FEFCBF;
+    --status-warning: #F4CE10;
+    --status-warning-dark: #857129;
+    --gradient-primary0: rgba(164, 120, 232, 1);
+    --gradient-primary1: rgba(81, 108, 247, 1);
+    --gradient-second0: rgba(81, 108, 247, 1);
+    --gradient-second1: rgba(177, 189, 251, 1);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
