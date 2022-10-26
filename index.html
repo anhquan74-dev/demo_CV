@@ -20,7 +20,19 @@
     <div id="wrapper">
         <div class="resume">
             <!-- resume-left -->
-            <div class="resume-left">
+            <section id="home" class="resume-left">
+                <!-- export to pdf button -->
+                <span class="export-btn">
+                    <i class="fa-solid fa-download"></i>
+                </span>
+                <!-- dark/light button -->
+                <span class="theme-btn">
+                    <i class="fa-regular fa-moon"></i>
+                </span>
+                <span class="theme-btn d-none">
+                    <i class="fa-regular fa-sun"></i>
+                    <!-- <i class="fa-regular fa-lightbulb"></i> -->
+                </span>
                 <!-- avatar -->
                 <div class="avatar">
                     <img src="./assets/image/avatar.jpg" alt="avatar">
@@ -165,11 +177,12 @@
                 <span class="shape shape5"></span>
                 <span class="shape shape6"></span>
                 <span class="shape shape7"></span>
-            </div>
+            </section>
             <!-- resume-right -->
             <div class="resume-right">
+
                 <!-- profile -->
-                <div class="block block--right">
+                <section id="profile" class="block block--right">
                     <div class="block__step-icon">
                         <span></span>
                     </div>
@@ -189,9 +202,9 @@
                             together.
                         </div>
                     </div>
-                </div>
+                </section>
                 <!-- education -->
-                <div class="block block--right">
+                <section id="education" class="block block--right">
                     <div class="block__step-icon">
                         <span></span>
                     </div>
@@ -201,24 +214,27 @@
                         </h3>
                         <div class="edu__list">
                             <div class="edu__item">
-                                <div class="edu__item-image">
-                                    <img src="./assets/image/logoDT.png" alt="">
+                                <div>
+                                    <div class="edu__item-image">
+                                        <img src="./assets/image/logoDT.png" alt="">
+                                    </div>
+                                    <div class="edu__item-desc">
+                                        <h3>Duy Tan University</h3>
+                                        <p>Software Engineering</p>
+                                    </div>
                                 </div>
-                                <div class="edu__item-desc">
-                                    <h3>Duy Tan University</h3>
-                                    <p>Software Engineering</p>
+                                <div class="edu__grade">
+                                    Grade: 3.76
                                 </div>
                                 <span>Aug 2019 - June 2023 <span><i class="fa-solid fa-location-dot"></i> Da
                                         Nang</span></span>
                             </div>
-                            <div class="edu__grade">
-                                Grade: 3.76
-                            </div>
+
                         </div>
                     </div>
-                </div>
+                </section>
                 <!-- experience -->
-                <div class="block block--right">
+                <section id="experience" class="block block--right">
                     <div class="block__step-icon">
                         <span></span>
                     </div>
@@ -283,9 +299,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
                 <!-- skills -->
-                <div class="block block--right">
+                <section id="skills" class="block block--right">
                     <div class="block__step-icon">
                         <span></span>
                     </div>
@@ -362,9 +378,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
                 <!-- tools -->
-                <div class="block block--right">
+                <section id="tools" class="block block--right">
                     <div class="block__step-icon">
                         <span></span>
                     </div>
@@ -411,9 +427,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
                 <!-- projects -->
-                <div class="block block--right">
+                <section id="projects" class="block block--right">
                     <div class="block__step-icon">
                         <span></span>
 
@@ -458,9 +474,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
                 <!-- hobbies -->
-                <div class="block block--right">
+                <section id="hobbies" class="block block--right">
                     <div class="block__step-icon">
                         <span></span>
 
@@ -488,13 +504,37 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
         </div>
     </div>
 
+    <!-- SCROLL TOP -->
+    <a href="#" class="scroll-top d-none">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- MENU RESPONSIVE -->
+    <div class="menu d-none show-nav">
+        <span>Tran Anh Quan</span>
+        <span><i class="fa-solid fa-bars"></i></span>
+    </div>
+
+    <!-- MENU ITEM -->
+    <div class="menu-list">
+        <div><a href="#home"><i class="fa-solid fa-house"></i><span>Home</span></a></div>
+        <div><a href="#profile"><i class="fa-regular fa-user"></i><span>Personal Profile</span></a></div>
+        <div><a href="#education"><i class="fa-solid fa-school"></i><span>Education</span></a></div>
+        <div><a href="#experience"><i class="fa-regular fa-building"></i><span>Exeperience</span></a></div>
+        <div><a href="#skills"><i class="fa-solid fa-code"></i><span>Skills</span></a></div>
+        <div><a href="#tools"><i class="fa-solid fa-code-branch"></i><span>Tools</span></a></div>
+        <div><a href="#projects"><i class="fa-solid fa-diagram-project"></i><span>Projects</span></a></div>
+        <div><a href="#hobbies"><i class="fa-regular fa-heart"></i><span>Hobbies</span></a></div>
+    </div>
+
     <!-- MAIN JS -->
     <script src="./assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </body>
 
 </html>
