@@ -32,6 +32,11 @@ window.addEventListener("resize", () => {
       console.log(line);
       line.classList.add("d-none");
     });
+    if (window.innerWidth > 854) {
+      menuList.classList.add('d-none');
+    } else {
+      menuList.classList.remove('d-none');
+    }
   } else {
     lineElements.forEach((line) => {
       console.log(line);
@@ -70,25 +75,34 @@ menuItems.forEach((item) => {
 });
 
 // active-link
-// const sections = document.querySelectorAll("section[id]");
-// console.log(sections);
-// const scrollActive = () => {
-//   const scrollY = window.pageYOffset;
-//   console.log(scrollY);
-//   sections.forEach((current) => {
-//     const sectionHeight = current.offsetHeight;
-//     const sectionTop = current.offsetTop - 120;
-//     sectionId = current.getAttribute("id");
-//     console.log(sectionHeight, sectionTop, sectionId);
-//     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-//       document
-//         .querySelector(".menu-list div a[href*=" + sectionId + "]")
-//         .classList.add("active-link");
-//     } else {
-//       document
-//         .querySelector(".menu-list div a[href*=" + sectionId + "]")
-//         .classList.remove("active-link");
-//     }
-//   });
-// };
-// window.addEventListener("scroll", scrollActive);
+const sections = document.querySelectorAll("section[id]");
+console.log(sections);
+const scrollActive = () => {
+  const scrollY = window.pageYOffset;
+  console.log(scrollY);
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
+    sectionId = current.getAttribute("id");
+    let sectionTop = 0;
+    sectionTop = current.offsetTop;
+    if (sectionId !== 'home') {
+      if (window.innerWidth > 600) {
+        sectionTop = current.offsetTop + 120 + sections[0].offsetHeight;
+      } else {
+        sectionTop = current.offsetTop + sections[0].offsetHeight;
+      }
+    }
+    console.log(sectionHeight, sectionTop, sectionId);
+    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+      document
+        .querySelector(".menu-list div a[href*=" + sectionId + "]")
+        .classList.add("active-link");
+    }
+    else {
+      document
+        .querySelector(".menu-list div a[href*=" + sectionId + "]")
+        .classList.remove("active-link");
+    }
+  });
+};
+window.addEventListener("scroll", scrollActive);

@@ -139,9 +139,11 @@ li {
     bottom: 55px;
 }
 
-/* .menu-list div a.active-link {
-    color: red;
-} */
+.menu-list div a.active-link,
+.menu-list div a.active-link i {
+    color: var(--primary-default);
+    font-weight: 700;
+}
 
 /* ===== Utils ===== */
 .d-flex {
@@ -454,7 +456,9 @@ li {
     margin-bottom: 1.8rem;
 }
 
-.block__item-right span {
+.block__item-right span,
+.block__item-right a {
+    /* text-decoration: none; */
     font-size: 1.2rem;
     font-weight: 500;
     color: var(--gray-dark);
